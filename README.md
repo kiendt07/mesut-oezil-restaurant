@@ -1,8 +1,8 @@
 # CoderRestaurant Website
 
-**Coder Restaurant** is a Ruby on Rails restaurant website let users order foods.
+**Mesut Oezil Restaurant** is a Ruby on Rails restaurant website let users order foods.
 
-Submitted by: **Your Name**
+Submitted by: **Kien Do**
 
 Time spent: **XX** hours spent in total
 
