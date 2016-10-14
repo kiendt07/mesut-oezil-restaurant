@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'checkout/index'
+
   get 'menu/index'
 
   root to: 'home#index'

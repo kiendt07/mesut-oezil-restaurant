@@ -19,6 +19,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #333;
 }
 
+a.pure {
+  text-decoration: none;
+  color: inherit;
+}
+
 .table th {
   text-align: center;
 }
@@ -103,6 +108,32 @@ h1, h2, h3, h4, h5, h6 {
 
 .items {
   max-width: 95%;
+}
+
+// Checkout
+#checkout {
+
+}
+
+.checkout-items {
+  margin: 30px auto;
+}
+
+.checkout-detail h3 {
+  color: #fff;
+}
+
+.checkout-total {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.checkout-info {
+  margin: 0px auto;
+}
+
+.price {
+  color: blue;
 }
 
 

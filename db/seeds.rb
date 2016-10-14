@@ -11,5 +11,5 @@
 end
 
 Section.all.each do |section|
-  5.times{section.food_items.create({name: Faker::Food.ingredient, description: Faker::Hipster.sentence, price: Faker::Commerce.price, img_url: Faker::Avatar.image})}
+  5.times{section.food_items.create({name: Faker::Food.ingredient, description: Faker::Hipster.sentence, price: Faker::Number.decimal(2, 2), img_url: Faker::Avatar.image})}
 end

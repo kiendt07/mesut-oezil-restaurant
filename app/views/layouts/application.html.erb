@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/tooltipster.bundle.min.css">
     <script type="text/javascript" src="assets/tooltipster.bundle.min.js"></script>
     <script>
-      $(document).ready(function() {
+      $(document).on('turbolinks:load',function() {
           $('.tooltipster').tooltipster();
       });
     </script>
