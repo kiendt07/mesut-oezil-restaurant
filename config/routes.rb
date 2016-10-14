@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'checkout/index'
+  post 'checkout/done'
 
   get 'menu/index'
 

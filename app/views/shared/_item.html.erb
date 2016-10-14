@@ -1,0 +1,15 @@
+<tr class="tooltipster" data-tooltip-content="#item-img-<%= item.id %>">
+  <th scope="row"><%= item.id %></th>
+  <td><strong><%= item.name %></strong></td>
+  <td><%= item.description %></td>
+  <td><%= item.price %>$</td>
+  <td>
+    <%= link_to '', checkout_index_path(item: item.id), class: "pure glyphicon glyphicon-shopping-cart" %>
+  </td>
+</tr>
+<div class="tooltip_templates">
+  <div id="item-img-<%= item.id %>">
+    <img src="<%= item.img_url %>" />
+    <h5><%= item.name %>: <%= item.price %>$</h5>
+  </div>
+</div>

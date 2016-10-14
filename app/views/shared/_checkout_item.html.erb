@@ -1,0 +1,26 @@
+<div class="box checkout-items">
+  <table class="table table-hover">
+
+    <thead>
+      <tr>
+        <th style="width: 10%">No</th>
+        <th style="width: 20%">Name</th>
+        <th style="width: 60%">Description</th>
+        <th style="width: 5%%">Price</th>
+        <th style="width: 5%"></th>
+      </tr>
+    </thead>
+
+    <!-- Table body -->
+    <tbody>
+      <%= render partial: 'shared/item', locals: {item: item} %>
+    </tbody> <!-- end body -->
+
+  </table> <!-- end table -->
+
+  <hr>
+  <div class="checkout-total">
+    <h2>Total: <span class="price"><%= total %></span>$</h2>
+  </div>
+
+</div>
