@@ -13,7 +13,7 @@
 
     <div class="checkout-info box">
       <h2 style="text-align: center">Billing info</h2>
-      <div class="container" style="width: 60%">
+      <div class="container" style="width: 60%; text-align: center">
         <form id="form-info" action="<%= url_for(action: 'done') %>" method="post">
 
           <input name="item" type="hidden" value="<%= @item.id %>">
