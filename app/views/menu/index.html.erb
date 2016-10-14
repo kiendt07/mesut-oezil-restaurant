@@ -10,14 +10,35 @@
     <!-- Section navigation -->
     <div class="row">
       <div class="col-md-2 col-sm-3">
-        <div class="box side-menu">
-          <ul class="nav nav-pills nav-stacked">
-            <% @sections.each do |section| %>
+        <div class="row">
+          <div class="box side-menu">
+            <ul class="nav nav-pills nav-stacked">
               <li class="nav-item">
-                <%= link_to section.name, menu_path(section: section.name), class: "nav-link #{"active" if params[:section] == section.name}" %>
+                <%= link_to 'All', menu_path(filter: params[:filter]), class: "nav-link #{"active" if !params[:section]}" %>
               </li>
-            <% end %>
-          </ul>
+              <% @sections.each do |section| %>
+                <li class="nav-item">
+                  <%= link_to section.name, menu_path(section: section.name, filter: params[:filter]), class: "nav-link #{"active" if params[:section] == section.name}" %>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Filter navigation -->
+        <div class="row">
+          <div class="box side-menu">
+            <ul class="nav nav-pills nav-stacked">
+              <li class="nav-item">
+                <%= link_to 'Normal', menu_path(section: params[:section]), class: "nav-link #{"active" if !params[:filter]}" %>
+              </li>
+              <% @filters.each do |filter| %>
+                <li class="nav-item">
+                  <%= link_to filter, menu_path(filter: filter, section: params[:section]), class: "nav-link #{"active" if params[:filter] == filter}" %>
+                </li>
+              <% end %>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -26,12 +47,13 @@
         <div class="items box fluid">
           <!-- Table -->
           <table class="table table-hover">
-            <thead style="text-align: center">
+            <thead>
               <tr>
                 <th style="width: 10%">No</th>
-                <th style="width: 25%">Name</th>
+                <th style="width: 20%">Name</th>
                 <th style="width: 60%">Description</th>
                 <th style="width: 5%%">Price</th>
+                <th style="width: 5%"></th>
               </tr>
             </thead>
             <!-- Table body -->
@@ -42,6 +64,9 @@
                   <td><strong><%= item.name %></strong></td>
                   <td><%= item.description %></td>
                   <td><%= item.price %>$</td>
+                  <td><span class="glyglyphicon glyphicon-shopping-cart">
+                    <%= link_to checkout_path(item: item.id) %>
+                  </span></td>
                 </tr>
                 <div class="tooltip_templates">
                   <div id="item-img-<%= item.id %>">
