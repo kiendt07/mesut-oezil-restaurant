@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/stympy/faker
+  revision: 04add77186a18713c8bbd504829c7e1912415402
+  specs:
+    faker (1.6.6)
+      i18n (~> 0.5)
+
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -45,6 +52,9 @@ GEM
     bootstrap (4.0.0.alpha4)
       autoprefixer-rails (>= 6.0.3)
       sass (>= 3.4.19)
+    bootstrap-glyphicons (0.0.1)
+      railties (>= 3.0)
+      sass (>= 3.2)
     builder (3.2.2)
     byebug (9.0.6)
     coffee-rails (4.2.1)
@@ -162,8 +172,10 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap (~> 4.0.0.alpha4)
+  bootstrap-glyphicons
   byebug
   coffee-rails (~> 4.2)
+  faker!
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)

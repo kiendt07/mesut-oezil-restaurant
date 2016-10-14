@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import 'bootstrap/glyphicons';
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
 
@@ -10,66 +11,114 @@ body {
   background: #7f8c8d;
   background-image: url('cover.jpg');
   height: 100%;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1.2rem;
-  color: #fff;
-  font-family: 'Josefin Sans', sans-serif;
+  color: #333;
 }
 
-.container {
-  height: 100%;
+.table th {
+  text-align: center;
+}
+
+// Layout
+//
+.box {
+  width: 80%;
+  padding: 20px 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.fluid {
   width: 100%;
 }
 
-.content {
-  height: 100%;
+.title {
+  font-size: 4.5em;
+  width: 100%;
+  padding: 10px 0px;
+  text-align: center;
+}
+
+// Google map embed
+//
+.google-maps {
+        position: relative;
+        padding-bottom: 75%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+    }
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+// Pages
+//
+// Contact Us
+#contact-us {
+  margin-top: 100px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px 20px;
   display: flex;
   align-items: center;
-}
-
-.box {
-  margin: 0px auto;
-  padding: 50px 30px;
-  width: 100%;
   height: 50%;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+}
+// Home
+#home {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+}
+
+.feature {
   text-align: center;
-  color: #fff;
-}
-
-.box .title {
   position: relative;
-  top: 15%;
 }
 
-h1.title {
-  font-size: 4.5em;
+.feature a.btn {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+// Menu
+#menu {
+
 }
 
-.box-content {
-  position: relative;
-  top: 45%;
+.display-items {
+  position: absolute;
+  top: 25%;
+  width: 100%;
 }
 
-button.btn {
-  border: 2px solid;
-  border-color: #e67e22;
-  border-radius: 0px;
-  background: transparent;
+.side-menu {
+
+}
+
+.items {
+  max-width: 95%;
+}
+
+
+
+// Tooltip
+.tooltip_templates {
+  display: none;
+}
+
+.tooltip_templates h2, h3, h4, h5{
+  padding: 15px 0px;
   color: #fff;
-  font-size: 1.3em;
-  transition: background-color 0.5s ease;
+  letter-spacing: normal;
+  text-align: center;
 }
 
-button.btn:hover {
-  background-color: #34495e;
-  border-color: none;
-}
-
-.box a {
-  text-decoration: none;
-  color: inherit;
+.tooltip_templates p {
+  text-align: center;
 }

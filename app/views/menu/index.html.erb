@@ -1,0 +1,62 @@
+<div id="menu">
+  <div class="box fluid">
+    <h1 class="title">
+      Menu
+    </h1>
+  </div>
+
+  <div class="display-items">
+
+    <!-- Section navigation -->
+    <div class="row">
+      <div class="col-md-2 col-sm-3">
+        <div class="box side-menu">
+          <ul class="nav nav-pills nav-stacked">
+            <% @sections.each do |section| %>
+              <li class="nav-item">
+                <%= link_to section.name, menu_path(section: section.name), class: "nav-link #{"active" if params[:section] == section.name}" %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Filtered Food Items -->
+      <div class="col-md-10 col-sm-9">
+        <div class="items box fluid">
+          <!-- Table -->
+          <table class="table table-hover">
+            <thead style="text-align: center">
+              <tr>
+                <th style="width: 10%">No</th>
+                <th style="width: 25%">Name</th>
+                <th style="width: 60%">Description</th>
+                <th style="width: 5%%">Price</th>
+              </tr>
+            </thead>
+            <!-- Table body -->
+            <tbody>
+              <% @food_items_filterd.each do |item| %>
+                <tr class="tooltipster" data-tooltip-content="#item-img-<%= item.id %>">
+                  <th scope="row"><%= item.id %></th>
+                  <td><strong><%= item.name %></strong></td>
+                  <td><%= item.description %></td>
+                  <td><%= item.price %>$</td>
+                </tr>
+                <div class="tooltip_templates">
+                  <div id="item-img-<%= item.id %>">
+                    <img src="<%= item.img_url %>" />
+                    <h5><%= item.name %>: <%= item.price %>$</h5>
+                  </div>
+                </div>
+              <% end %>
+            </tbody> <!-- end body -->
+          </table> <!-- end table -->
+
+        </div>
+
+      </div>
+
+    </div>
+
+</div>

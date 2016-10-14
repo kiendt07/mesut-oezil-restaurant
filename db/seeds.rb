@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+%w(Breakfast Lunch Dinner Drinks).each do |section|
+  Section.create({name: section})
+end
+
+Section.all.each do |section|
+  5.times{section.food_items.create({name: Faker::Food.ingredient, description: Faker::Hipster.sentence, price: Faker::Commerce.price, img_url: Faker::Avatar.image})}
+end

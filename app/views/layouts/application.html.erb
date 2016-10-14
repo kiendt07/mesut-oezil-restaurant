@@ -6,12 +6,20 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="assets/tooltipster.bundle.min.css">
+    <script type="text/javascript" src="assets/tooltipster.bundle.min.js"></script>
+    <script>
+      $(document).ready(function() {
+          $('.tooltipster').tooltipster();
+      });
+    </script>
+
   </head>
 
   <body>
       <div class="content">
         <%= yield %>
       </div>
-    
+
   </body>
 </html>
