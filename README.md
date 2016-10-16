@@ -6,7 +6,7 @@ Submitted by: **Kien Do**
 
 Time spent: **10** hours spent in total
 
-URL: **heroku-app-url**
+URL: **https://up-restaurant.herokuapp.com/**
 
 ## User Stories
 
