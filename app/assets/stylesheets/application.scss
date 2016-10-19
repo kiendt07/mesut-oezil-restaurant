@@ -3,8 +3,6 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 @import 'tooltipster.bundle.min';
 
-
-
 html {
   height: 100%;
 }
@@ -30,12 +28,23 @@ a.pure {
   text-align: center;
 }
 
+.nav-home {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: blue;
+}
+
 // Layout
 //
 .box {
   width: 80%;
-  padding: 20px 40px;
+  padding: 10px 20px;
   background-color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .fluid {
@@ -70,9 +79,8 @@ a.pure {
 //
 // Contact Us
 #contact-us {
-  margin-top: 100px;
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 30px 20px;
+  padding: 30px;
   display: flex;
   align-items: center;
   height: 50%;
@@ -99,8 +107,8 @@ a.pure {
 }
 
 .display-items {
-  position: absolute;
-  top: 25%;
+
+
   width: 100%;
 }
 
